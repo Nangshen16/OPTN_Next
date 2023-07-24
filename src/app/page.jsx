@@ -1,8 +1,14 @@
 "use client";
+import React from "react";
+import Link from "next/link";
+// import { Link } from "react-router-dom"
 
 import { useState, useEffect } from "react";
 import InputNumber from 'rc-input-number';
 import {QRCodeSVG} from 'qrcode.react';
+import {NumForm} from '../components/NumForm'
+// import {QRCodeCanvas} from 'qrcode.react';
+
 
 import { Button } from "@material-tailwind/react";
 
@@ -66,7 +72,9 @@ const Home = () => {
       <div className='flex-end mx-3 mb-5 gap-4'>
         <Button className="border-4 bg-transparent" onClick={() => { getXPub() }} >
           Get Extended Public Key
+          <Link href="/QRCODE/repos">QRCODE</Link>
         </Button>
+        
         <InputNumber
           value={account}
           onChange={(e) => setAccount(e)}
@@ -98,7 +106,11 @@ const Home = () => {
         }
       </div>
 
-      <div className='flex-end mx-3 mb-5 gap-4'>XPub {XPub}</div>
+     
+      <div className='flex-end mx-3 mb-50 gap-4'>XPub {XPub}
+          
+      </div>
+      
       <div className='flex-end mx-3 mb-5 gap-4'>BIP44 Path m/44'/1'/{account}'/{change}/{index}</div>
       <div className='flex-end mx-3 mb-5 gap-4'>Address {address}</div>
       <QRCodeSVG className="mb-5" value={BIP21URL} />

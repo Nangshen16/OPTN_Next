@@ -1,8 +1,17 @@
+"use client"
+
+import { Typography } from "@material-tailwind/react"
+import {Space} from 'antd';
+import Link from "next/link"
+
+
 const FooterComponent = () => {    
 	return (  
-		<section className='w-full max-w-full flex-center flex-col'>
-			<div className='desc head_text text-center'>I am Footer Component</div>    
-		</section>
+		
+		<div className="footer">
+			
+
+		</div>
 	)
 }
-export default FooterComponent
+export default FooterComponent;

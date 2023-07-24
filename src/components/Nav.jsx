@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
+// import {Cryptocurrencies} from '../components';
+
 
 const Nav = () => {
   return (
@@ -13,8 +15,18 @@ const Nav = () => {
           height={30}
           className='object-contain'
         />
+        <Image 
+          src='/images/crypto.jpeg'
+          alt='logo'
+          width={30}
+          height={30} 
+          
+        />
         <p className="logo_text">CashToken</p>
+        
       </Link>
+      
+
     </nav>
   )
 }

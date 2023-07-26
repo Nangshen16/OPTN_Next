@@ -1,9 +1,11 @@
+// "use client"
+
 import React, {useEffect, useState} from 'react'
 import Link from 'antd/es/typography/Link';
-import {getCryptosQuery} from '../resources/cryptoApi';
+import {useGetCryptosQuery} from '../resources/cryptoApi';
 
 const Cryptocurrencies = () => {
-  const {data: cryptoFile,isFetching}= getCryptosQuery();
+  const {data: cryptoFile,isFetching}= useGetCryptosQuery();
   const [cryptos, setCryptos] = useState([]);
   const [searchName, setSearchName] = useState('');
   //this combines the component that start which update for line 13
@@ -14,7 +16,7 @@ const Cryptocurrencies = () => {
   
   return (
     <>
-        <div className="search crypto">
+        {/* <div className="search crypto">
           <input className="border-normal-text focus:outline-none border border-solid
                     box-border w-full rounded-lg
                     text-normal-text text-sm p-2
@@ -22,10 +24,9 @@ const Cryptocurrencies = () => {
                   placeholder='Search CryptoCurrencies'
                     />
 
-        </div>
+        </div> */}
     </>
     
   )
 }
-
-export default Cryptocurrencies
+export default Cryptocurrencies;

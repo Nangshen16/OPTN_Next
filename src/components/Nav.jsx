@@ -1,7 +1,12 @@
-import React from 'react'
+"use client"
+
+import React, {useEffect, useState} from 'react'
 import Link from "next/link";
 import Image from "next/image";
-// import {Cryptocurrencies} from '../components';
+// import {Cryptocurrencies} from '../components/Cryptocurrencies';
+import {HomeOutlined,FundOutlined,MoneyCollectOutlined} from '@ant-design/icons';
+import {Cryptocurrencies} from './Cryptocurrencies';
+import { Avatar, Menu, Typography } from 'antd';
 
 
 const Nav = () => {
@@ -25,6 +30,23 @@ const Nav = () => {
         <p className="logo_text">CashToken</p>
         
       </Link>
+      <div className='nav-container'>
+        <Avatar/>
+        <Menu theme="dark">
+          <Menu.Item icon={<HomeOutlined/>}>
+            <Link to="/">Home</Link>
+          </Menu.Item>
+          <Menu.Item icon={<FundOutlined/>}>
+            <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+          </Menu.Item>
+          <Menu.Item icon={<MoneyCollectOutlined/>}>
+            <Link to="/exchanges">Exchanges</Link>
+          </Menu.Item>
+
+        </Menu>
+       
+
+      </div>
       
 
     </nav>

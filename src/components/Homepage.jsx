@@ -2,8 +2,10 @@ import React from 'react'
 import Link from 'next/link'
 
 import {Cryptocurrencies} from "../components";
-
+import { useGetCryptosQuery } from '../resources/cryptoApi';
 const HomePage = () => {
+  const {data, isFetching} = useGetCryptosQuery();
+  console.log(data);
   return (
     <>
         <div className="search crypto">

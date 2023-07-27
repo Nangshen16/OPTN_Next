@@ -1,7 +1,7 @@
 // "use client"
 
 import React, {useEffect, useState} from 'react'
-import Link from 'antd/es/typography/Link';
+// import Link from 'antd/es/typography/Link';
 import {useGetCryptosQuery} from '../resources/cryptoApi';
 
 const Cryptocurrencies = () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 import {Cryptocurrencies} from "../components";
 import { useGetCryptosQuery } from '../resources/cryptoApi';

@@ -5,10 +5,10 @@ import React, {useEffect, useState} from 'react'
 import Link from 'antd/es/typography/Link';
 import Image from "next/image";
 // import {Cryptocurrencies} from '../components/Cryptocurrencies';
-import {HomeOutlined,FundOutlined,MoneyCollectOutlined} from '@ant-design/icons';
+import {HomeOutlined,FundOutlined,MoneyCollectOutlined, QrcodeOutlined } from '@ant-design/icons';
 import {Cryptocurrencies} from './Cryptocurrencies';
 import { Avatar, Menu, Typography } from 'antd';
-
+import icon from '../images/crypto.jpeg';
 
 const Nav = () => {
   return (
@@ -32,17 +32,26 @@ const Nav = () => {
         
       </Link>
       <div className='nav-container'>
-        <Avatar/>
+        <Avatar src={icon} size="large"/>
         <Menu theme="dark">
           <Menu.Item icon={<HomeOutlined/>}>
-            <Link to="/">Home</Link>
+            <Link href="components/">Home</Link>
           </Menu.Item>
           <Menu.Item icon={<FundOutlined/>}>
-            <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+            <Link href="components/cryptocurrencies">Cryptocurrencies</Link>
           </Menu.Item>
           <Menu.Item icon={<MoneyCollectOutlined/>}>
-            <Link to="/exchanges">Exchanges</Link>
+            <Link href="components/exchanges">Exchanges</Link>
           </Menu.Item>
+          <Menu.Item icon={<QrcodeOutlined />}>
+            <Link href="components/qrcode">QrCode</Link>
+          </Menu.Item>
+          <Menu.Item icon={<QrcodeOutlined />}>
+            
+            <Link href="/QRCODE/repos">QRCODE</Link>
+
+          </Menu.Item>
+          
 
         </Menu>
        

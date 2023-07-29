@@ -30,10 +30,21 @@ import { Typography, Row, Col, Statistic } from 'antd';
 import { Link } from 'react-router-dom';
 const {Title } = Typography;
 
+import { useGetCryptosQuery } from '../resources/cryptoApi';
+
 const Homepage = () => {
+  const { data, isFetching } = useGetCryptosQuery();
+  console.log(data);
   return (
     <>
        <Title level={2} className="heading">Bitcoin Bay TOKEN</Title>
+       <Row>
+            <Col span={15}><Statistic title="Total Cryptocurrencies" value="5"/></Col>
+            <Col span={15}><Statistic title="Total Exchanges" value="5"/></Col>
+            <Col span={15}><Statistic title="Total Prices" value="5"/></Col>
+
+       </Row>
+
 
     </>
   )

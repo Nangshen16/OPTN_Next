@@ -43,10 +43,10 @@ const App = () => {
 
                 </Typography.Title>
                     <Space>
-                        <Link to="/">Home</Link>
-                        <Link to="/exchanges">Exchanges</Link>
-                        <Link to="/cryptocurrencies">Cryptocurrencies</Link>
-                        <Link to="/qrcode">QrCode</Link>  
+                        <Link href="/">Home</Link>
+                        <Link href="components/exchanges">Exchanges</Link>
+                        <Link href="components/cryptocurrencies">Cryptocurrencies</Link>
+                        <Link href="components/qrcode">QrCode</Link>  
                         <Link href="/QRCODE/repos">QRCODE</Link>
            
                     </Space>

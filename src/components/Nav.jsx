@@ -1,8 +1,9 @@
 "use client"
 
 import React, {useEffect, useState} from 'react'
+import { Link } from 'react-router-dom'
 // import Link from "next/link";
-import Link from 'antd/es/typography/Link';
+// import Link from 'antd/es/typography/Link';
 import Image from "next/image";
 // import {Cryptocurrencies} from '../components/Cryptocurrencies';
 import {HomeOutlined,FundOutlined,MoneyCollectOutlined, QrcodeOutlined } from '@ant-design/icons';

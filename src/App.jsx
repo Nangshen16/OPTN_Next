@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'antd/es/typography/Link'
 import {Layout, Space, Typography} from "antd";
 import {Nav, Exchanges, Homepage, CryptoCurrencies, QrCode} from '../components/Nav';
-
+import { Link } from 'react-router-dom';
 import './Styles.css';
 import { Exchanges } from './components/export';
 import Cryptocurrencies from './components/Cryptocurrencies';
@@ -35,21 +35,22 @@ const App = () => {
                 </div>
             </Layout>
 
-        </div>
-        <div className='footer' >
-            <Typography.Title level={5} style={{color: 'white', textAlign: "center"}}>
-                Cash Token<br/>
-                All rights reserved
+        
+            <div className='footer' >
+                <Typography.Title level={5} style={{color: 'white', textAlign: "center"}}>
+                         Cash Token<br/>
+                         All rights reserved
 
-            </Typography.Title>
-            <Space>
-                <Link to="/">Home</Link>
-                <Link to="/exchanges">Exchanges</Link>
-                <Link to="/cryptocurrencies">Cryptocurrencies</Link>
-                <Link to="/qrcode">QrCode</Link>  
-                <Link href="/QRCODE/repos">QRCODE</Link>
+                </Typography.Title>
+                    <Space>
+                        <Link to="/">Home</Link>
+                        <Link to="/exchanges">Exchanges</Link>
+                        <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+                        <Link to="/qrcode">QrCode</Link>  
+                        <Link href="/QRCODE/repos">QRCODE</Link>
            
-            </Space>
+                    </Space>
+            </div>
             
 
         </div>

@@ -25,7 +25,28 @@ ReactDOM.render(
     </BrowserRouter>
 
         
-)
+) 
+{
+    // return (
+    //     <BrowserRouter>
+    //     <Router>
+
+    //         <Provider store={store}>
+    //              <App/>
+
+    //         </Provider>
+
+
+    //     </Router>,
+
+    //     document.getElementById('root')
+
+
+    // </BrowserRouter>
+
+    // )
+}
+
 
 
 export default index;

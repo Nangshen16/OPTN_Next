@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import axios from 'axios';
 
 import Nav from "@/components/Nav";
 import FooterComponent from "@/components/Footer";
@@ -19,7 +20,7 @@ export default function RootLayout({ children }){
         <main className='app'>
           <Nav />
           {children}
-          <Footer/>
+          <footer/>
         </main>
       </body>
     </html>

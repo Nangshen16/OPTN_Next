@@ -31,7 +31,17 @@
 // }
 // export default Cryptocurrencies;
 import React from 'react'
+import Link from 'next/link';
 
+async function fetchRepoContents(name) {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
+  const response= await fetch(
+    `https://coinranking1.p.rapidapi.com`
+  );
+  const contents = await response.json();
+  return contents;
+}
 const Cryptocurrencies = () => {
   return (
     <div>Cryptocurrencies</div>

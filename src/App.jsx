@@ -46,9 +46,9 @@ const App = () => {
                 </Typography.Title>
                     <Space>
                         <Link href="/">Home</Link>
-                        <Link href="components/exchanges">Exchanges</Link>
-                        <Link href="components/cryptocurrencies">Cryptocurrencies</Link>
-                        <Link href="components/qrcode">QrCode</Link>  
+                        <Link href="/exchanges">Exchanges</Link>
+                        <Link href="/cryptocurrencies">Cryptocurrencies</Link>
+                        <Link href="/qrcode">QrCode</Link>  
                         <Link href="/QRCODE/repos">QRCODE</Link>
            
                     </Space>

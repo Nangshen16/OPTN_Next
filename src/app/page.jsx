@@ -1,14 +1,15 @@
 "use client";
-import React from "react";
+import React,{components} from "react";
 import Link from "next/link";
 // import { Link } from "react-router-dom"
+import axios from 'axios';
 
 import { useState, useEffect } from "react";
 import InputNumber from 'rc-input-number';
 import {QRCodeSVG} from 'qrcode.react';
 import {NumForm} from '../components/NumForm'
 // import {QRCodeCanvas} from 'qrcode.react';
-
+// import Cryptocurrencies from './components/Cryptocurrencies';
 
 import { Button } from "@material-tailwind/react";
 

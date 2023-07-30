@@ -1,3 +1,5 @@
+"use client"
+
 // import {Space} from "antd";
 import React from 'react'
 import ReactDOM from "react-dom";

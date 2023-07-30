@@ -1,8 +1,10 @@
 import React from 'react'
-import Link from 'antd/es/typography/Link'
+// import { Link } from 'react-router-dom';
+import Link from 'next/link'
+// import Link from 'antd/es/typography/Link'
 import {Layout, Space, Typography} from "antd";
 import {Nav, Exchanges, Homepage, CryptoCurrencies, QrCode} from '../components/Nav';
-import { Link, Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import './Styles.css';
 import { Exchanges } from './components/export';
 import Cryptocurrencies from './components/Cryptocurrencies';
@@ -18,16 +20,16 @@ const App = () => {
             <Layout>
                 <div className='routes'>
                     <Routes>
-                        <Route expact path="/">
+                        <Route path="/">
                             <Homepage/>
                         </Route>
-                        <Route expact path="/cryptocurrencies">
+                        <Route path="/cryptocurrencies">
                             <Cryptocurrencies/>
                         </Route>
-                        <Route expact path="/exchanges">
+                        <Route path="/exchanges">
                             <Exchanges/>
                         </Route>
-                        <Route expact path="/qrcode">
+                        <Route path="/qrcode">
                             <QrCode/>
                         </Route>
                     </Routes>

@@ -1,12 +1,12 @@
-
-import Link from 'next/link'
+import { Link } from 'react-router-dom';
+// import Link from 'next/link'
 import React from 'react'
 
 const QRPage = () => {
   return (
     <div className='QR'>
           
-        <Link href='/QRCODE/repos' className='btn btn-back'>
+        <Link to='/QRCODE/repos' className='btn btn-back'>
           Show QRCode
         </Link>
         

@@ -1,6 +1,6 @@
-"use client"
 
-import React from 'react'
+// import axios from 'axios';
+import React from 'react';
 // import { Link } from 'react-router-dom';
 import Link from 'next/link'
 // import Link from 'antd/es/typography/Link'
@@ -28,7 +28,9 @@ export default function App(){
                 'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
               
             }
+            
         };
+        console.log(options);
         fetch(baseUrl, options)
             .then(response => response.json())
             .then(response => {

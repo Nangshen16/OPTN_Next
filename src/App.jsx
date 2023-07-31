@@ -5,13 +5,13 @@ import React from 'react';
 import Link from 'next/link'
 // import Link from 'antd/es/typography/Link'
 import {Layout, Space, Typography} from "antd";
-import {Nav, Exchanges, Homepage, CryptoCurrencies, QrCode} from '../components/Nav';
+import {Nav, Exchanges, Homepage, QrCode} from '../components/Nav';
 import { Routes, Route, Link } from 'react-router-dom';
 import './Styles.css';
 import { Exchanges } from './components/export';
-import Cryptocurrencies from './components/Cryptocurrencies';
+import { cryptos } from 'src/app/cryptos/depos/page.jsx';
 import { useEffect, useState} from 'react';
-
+import Layout from 'src/app/cryptos/depos';
 export default function App(){
     // const [data, setData] = useState();
     // console.log(data);
@@ -82,7 +82,7 @@ export default function App(){
                         <Route path="/">
                             <Homepage/>
                         </Route>
-                        <Route path="/cryptocurrencies">
+                        <Route path="src/app/cryptos/depos/">
                             <Cryptocurrencies/>
                         </Route>
                         <Route path="/exchanges">
@@ -106,7 +106,7 @@ export default function App(){
                     <Space>
                         <Link href="/">Home</Link>
                         <Link href="/exchanges">Exchanges</Link>
-                        <Link href="/cryptocurrencies">Cryptocurrencies</Link>
+                        <Link href="src/app/cryptos/depos">Cryptocurrencies</Link>
                         <Link href="/qrcode">QrCode</Link>  
                         {/* <Link href="/QRCODE/repos">QRCODE</Link> */}
            

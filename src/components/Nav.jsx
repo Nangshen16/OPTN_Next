@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 // import {Cryptocurrencies} from '../components/Cryptocurrencies';
 import {HomeOutlined,FundOutlined,MoneyCollectOutlined, QrcodeOutlined } from '@ant-design/icons';
-import {Cryptocurrencies} from './Cryptocurrencies';
+import {Cryptocurrencies} from 'src/app/cryptos/depos/page.jsx';
 import { Avatar, Menu, Typography } from 'antd';
 import icon from '../images/crypto.jpeg';
 
@@ -38,7 +38,7 @@ const Nav = () => {
             <Link href="components/">Home</Link>
           </Menu.Item>
           <Menu.Item icon={<FundOutlined/>}>
-            <Link href="components/cryptocurrencies">Cryptocurrencies</Link>
+            <Link href="src/app/cryptos/depos/page.jsx">Cryptocurrencies</Link>
           </Menu.Item>
           <Menu.Item icon={<MoneyCollectOutlined/>}>
             <Link href="components/exchanges">Exchanges</Link>

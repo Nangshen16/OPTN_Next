@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 
 const Cryptocurrencies = async() => {
@@ -17,7 +19,7 @@ const Cryptocurrencies = async() => {
         console.error(error);
     }
       return (
-        <div>Cryptocurrencies</div>
+        <h1>Cryptocurrencies</h1>
       )
 };
 

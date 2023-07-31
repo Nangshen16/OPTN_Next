@@ -1,8 +1,8 @@
 import '@/styles/globals.css'
 import axios from 'axios';
-
+import cryptocurrencies from 'src/app/cryptos/depos'
 import Nav from "@/components/Nav";
-import FooterComponent from "@/components/Footer";
+import footer from "@/components/Footer";
 import { Space } from 'antd';
 export const metadata = {
   title: 'Create Next App',

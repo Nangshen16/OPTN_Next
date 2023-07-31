@@ -13,33 +13,58 @@ import Cryptocurrencies from './components/Cryptocurrencies';
 import { useEffect, useState} from 'react';
 
 export default function App(){
-    const [data, setData] = useState();
-    console.log(data);
+    // const [data, setData] = useState();
+    // console.log(data);
 
-    const baseUrl = 'https://coinranking1.p.rapidapi.com';
-    console.log(baseUrl);
+    // const baseUrl = 'https://coinranking1.p.rapidapi.com';
+    // console.log(baseUrl);
 
 
-    useEffect(() => {
-        const options ={
-            method: 'GET',
-            header: {
-                'X-RapidAPI-Key': '3c75dad19emshbbaa068eccb5200p195ad8jsn546ff5a8c5da',
-                'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+    // useEffect(() => {
+    //     const options ={
+    //         method: 'GET',
+    //         header: {
+    //             'X-RapidAPI-Key': '3c75dad19emshbbaa068eccb5200p195ad8jsn546ff5a8c5da',
+    //             'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
               
-            }
+    //         }
             
-        };
-        console.log(options);
-        fetch(baseUrl, options)
-            .then(response => response.json())
-            .then(response => {
-                console.log(response);
-            })
-            .catch(err =>{
-                console.error(err);
-            })
-    })
+    //     };
+    //     console.log(options);
+    //     fetch(baseUrl, options)
+    //         .then(response => response.json())
+    //         .then(response => {
+    //             console.log(response);
+    //         })
+    //         .catch(err =>{
+    //             console.error(err);
+    //         })
+    // })
+    const http = require('https');
+
+    const options = {
+	     method: 'GET',
+	     hostname: 'coinranking1.p.rapidapi.com',
+	     port: null,
+	     path: '/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0',
+	     headers: {
+		     'X-RapidAPI-Key': '3c75dad19emshbbaa068eccb5200p195ad8jsn546ff5a8c5da',
+		     'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+	    }
+    };
+
+    const req = http.request(options, function (res) {
+	         const chunks = [];
+
+	 
+
+	    res.on('end', function () {
+		     const body = Buffer.concat(chunks);
+		     console.log(body.toString());
+	    });
+    });
+
+    req.end();
 
 
 

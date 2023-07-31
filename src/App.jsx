@@ -108,7 +108,7 @@ export default function App(){
                         <Link href="/exchanges">Exchanges</Link>
                         <Link href="/cryptocurrencies">Cryptocurrencies</Link>
                         <Link href="/qrcode">QrCode</Link>  
-                        <Link href="/QRCODE/repos">QRCODE</Link>
+                        {/* <Link href="/QRCODE/repos">QRCODE</Link> */}
            
                     </Space>
             </div>

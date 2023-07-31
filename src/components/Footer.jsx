@@ -5,7 +5,7 @@ import {Space} from 'antd';
 import Link from "next/link"
 
 
-const FooterComponent = () => {    
+const Footer = () => {    
 	return (  
 		
 		<div className="footer">
@@ -14,4 +14,4 @@ const FooterComponent = () => {
 		</div>
 	)
 }
-export default FooterComponent;
+export default Footer;

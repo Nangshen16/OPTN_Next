@@ -14,8 +14,10 @@ import { useEffect, useState} from 'react';
 
 export default function App(){
     const [data, setData] = useState();
+    console.log(data);
 
     const baseUrl = 'https://coinranking1.p.rapidapi.com';
+    console.log(baseUrl);
 
 
     useEffect(() => {

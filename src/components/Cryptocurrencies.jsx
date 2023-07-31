@@ -42,9 +42,26 @@ async function fetchRepoContents(name) {
   const contents = await response.json();
   return contents;
 }
-const Cryptocurrencies = () => {
+const Cryptocurrencies = async({name}) => {
+  const contents= await fetchRepoContents(name);
+  const dirs = contents.filter((content) => content.type === 'dir');
   return (
-    <div>Cryptocurrencies</div>
+    <>
+        <h1>Rapid API</h1>
+        <ul>
+          {dirs.map((dir)=>(
+            <li key={dir.path}>
+              <Link href={`/resources/cryptoApi/${name}/${dir.path}`}>
+                {dir.path}
+              </Link>
+            </li>
+          )
+
+          )}
+        </ul>
+
+    </>
+
   )
 }
 

@@ -8,8 +8,36 @@ import { Routes, Route, Link } from 'react-router-dom';
 import './Styles.css';
 import { Exchanges } from './components/export';
 import Cryptocurrencies from './components/Cryptocurrencies';
+import { useEffect, useState} from 'react';
 
-const App = () => {
+export default function App(){
+    const [data, setData] = useState();
+
+    const baseUrl = 'https://coinranking1.p.rapidapi.com';
+
+
+    useEffect(() => {
+        const options ={
+            method: 'GET',
+            header: {
+                'X-RapidAPI-Key': '3c75dad19emshbbaa068eccb5200p195ad8jsn546ff5a8c5da',
+                'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+              
+            }
+        };
+        fetch(baseUrl, options)
+            .then(response => response.json())
+            .then(response => {
+                console.log(response);
+            })
+            .catch(err =>{
+                console.error(err);
+            })
+    })
+
+
+
+
   return (
     <div className='app'>
         <div className='navbar'>
@@ -63,4 +91,4 @@ const App = () => {
   )
 }
 
-export default App
+// export default App;

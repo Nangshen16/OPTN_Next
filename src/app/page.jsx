@@ -2,7 +2,6 @@
 import React,{components} from "react";
 import Link from "next/link";
 // import { Link } from "react-router-dom"
-import axios from 'axios';
 
 import { useState, useEffect } from "react";
 import InputNumber from 'rc-input-number';

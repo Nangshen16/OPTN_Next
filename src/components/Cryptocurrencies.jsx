@@ -30,39 +30,39 @@
 //   )
 // }
 // export default Cryptocurrencies;
-import React from 'react'
-import Link from 'next/link';
+// import React from 'react'
+// import Link from 'next/link';
 
-async function fetchRepoContents(name) {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+// async function fetchRepoContents(name) {
+//   await new Promise((resolve) => setTimeout(resolve, 3000));
 
-  const response= await fetch(
-    `https://coinranking1.p.rapidapi.com`
-  );
-  const contents = await response.json();
-  return contents;
-}
-const Cryptocurrencies = async({name}) => {
-  const contents= await fetchRepoContents(name);
-  const dirs = contents.filter((content) => content.type === 'dir');
-  return (
-    <>
-        <h1>Rapid API</h1>
-        <ul>
-          {dirs.map((dir)=>(
-            <li key={dir.path}>
-              <Link href={`/resources/cryptoApi/${name}/${dir.path}`}>
-                {dir.path}
-              </Link>
-            </li>
-          )
+//   const response= await fetch(
+//     `https://coinranking1.p.rapidapi.com`
+//   );
+//   const contents = await response.json();
+//   return contents;
+// }
+// const Cryptocurrencies = async({name}) => {
+//   const contents= await fetchRepoContents(name);
+//   const dirs = contents.filter((content) => content.type === 'dir');
+//   return (
+//     <>
+//         <h1>Rapid API</h1>
+//         <ul>
+//           {dirs.map((dir)=>(
+//             <li key={dir.path}>
+//               <Link href={`/resources/cryptoApi/${name}/${dir.path}`}>
+//                 {dir.path}
+//               </Link>
+//             </li>
+//           )
 
-          )}
-        </ul>
+//           )}
+//         </ul>
 
-    </>
+//     </>
 
-  )
-}
+//   )
+// }
 
-export default Cryptocurrencies
+// export default Cryptocurrencies

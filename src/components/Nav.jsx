@@ -4,12 +4,12 @@ import React, {useEffect, useState} from 'react'
 import Link from "next/link";
 // import Link from 'antd/es/typography/Link';
 import Image from "next/image";
-// import {Cryptocurrencies} from '../components/Cryptocurrencies';
+
 import {HomeOutlined,FundOutlined,MoneyCollectOutlined, QrcodeOutlined } from '@ant-design/icons';
-import {Cryptocurrencies} from 'src/app/cryptos/depos/page.jsx';
+
 import { Avatar, Menu, Typography } from 'antd';
 import icon from '../images/crypto.jpeg';
-
+import CRYPTOS from 'src/app/CRYPTOS/depos';
 const Nav = () => {
   return (
     <nav className='flex-between w-full mb-8 pt-3'>
@@ -38,7 +38,7 @@ const Nav = () => {
             <Link href="components/">Home</Link>
           </Menu.Item>
           <Menu.Item icon={<FundOutlined/>}>
-            <Link href="src/app/cryptos/depos/page.jsx">Cryptocurrencies</Link>
+            <Link href="src/app/cryptos/depos">Cryptos</Link>
           </Menu.Item>
           <Menu.Item icon={<MoneyCollectOutlined/>}>
             <Link href="components/exchanges">Exchanges</Link>
@@ -60,6 +60,7 @@ const Nav = () => {
       
 
     </nav>
+    
   )
 }
 

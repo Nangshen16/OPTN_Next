@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import axios from 'axios';
-import cryptocurrencies from 'src/app/cryptos/depos'
+// import CRYPTOS from 'src/app/cryptos/depos'
 import Nav from "@/components/Nav";
 import footer from "@/components/Footer";
 import { Space } from 'antd';

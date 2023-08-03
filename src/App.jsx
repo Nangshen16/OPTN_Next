@@ -9,9 +9,9 @@ import {Nav, Exchanges, Homepage, QrCode} from '../components/Nav';
 import { Routes, Route, Link } from 'react-router-dom';
 import './Styles.css';
 import { Exchanges } from './components/export';
-import { cryptos } from 'src/app/cryptos/depos/page.jsx';
+import Cryptos from './app/CRYPTOS/depos';
 import { useEffect, useState} from 'react';
-import Layout from 'src/app/cryptos/depos';
+import Layout from 'src/app';
 export default function App(){
     // const [data, setData] = useState();
     // console.log(data);
@@ -106,7 +106,7 @@ export default function App(){
                     <Space>
                         <Link href="/">Home</Link>
                         <Link href="/exchanges">Exchanges</Link>
-                        <Link href="src/app/cryptos/depos">Cryptocurrencies</Link>
+                        <Link href="src/app/cryptos/depos">Cryptos</Link>
                         <Link href="/qrcode">QrCode</Link>  
                         {/* <Link href="/QRCODE/repos">QRCODE</Link> */}
            

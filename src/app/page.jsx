@@ -9,7 +9,7 @@ import {QRCodeSVG} from 'qrcode.react';
 import {NumForm} from '../components/NumForm'
 // import {QRCodeCanvas} from 'qrcode.react';
 // import Cryptocurrencies from './components/Cryptocurrencies';
-
+// import CRYPTOS from 'src/app/CRYPTOS/depos'
 import { Button } from "@material-tailwind/react";
 
 import { NumPad } from '@/components/NumPad'

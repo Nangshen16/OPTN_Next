@@ -1,9 +1,10 @@
 "use client"
 
+import { response } from 'express';
 import React from 'react'
 
 const Cryptos = async() => {
-    const url = 'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0';
+    const url = 'https://coinranking1.p.rapidapi.com/coins';
     const options = {
 	      method: 'GET',
 	      headers: {
@@ -22,7 +23,7 @@ const Cryptos = async() => {
       return (
           
         <div>
-            <h1>Cryptocurrencies</h1>
+            <h1>CRYPTOTESTING</h1>
 
         </div>
          

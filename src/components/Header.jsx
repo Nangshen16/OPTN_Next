@@ -6,7 +6,14 @@ import { useState } from 'react';
 const Header = () => {
     return(
         <div>
+            <form className='flex items-center space-x-5 bg-white'>
+                {/* <input></input> */}
+
+            </form>
             
+
         </div>
+            
+        
     )
 }
